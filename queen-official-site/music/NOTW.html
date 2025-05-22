@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queen Band Official Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="images/Header-Logo.png" alt="Queen Logo" class="logo">
+        </a>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-button">Home</a></li>
+                <li><a href="discography.html" class="nav-button">Discography</a></li>
+                <li class="dropdown">
+                    <a href="members.html" class="nav-button">THE BAND</a>
+                    <ul class="dropdown-content">
+                        <li><a href="queen.html">Queen</a></li>
+                        <li><a href="freddie.html">Freddie Mercury</a></li>
+                        <li><a href="brian.html">Brian May</a></li>
+                        <li><a href="roger.html">Roger Taylor</a></li>
+                        <li><a href="john.html">John Deacon</a></li>
+                        <li><a href="features.html">Features</a></li>
+                    </ul>
+                </li>
+                <li><a href="videos.html" class="nav-button">Videos</a></li>
+                <li><a href="merch.html" class="nav-button">Merchandise</a></li>
+                <li><a href="news.html" class="nav-button">News</a></li>
+                <li><a href="contact.html" class="nav-button">Contact</a></li>
+            </ul>
+        </nav>
+        <head>
+            <!-- 引入 Slick Carousel CSS -->
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+            <link rel="stylesheet" type="text/css" href="link rel="stylesheet" href="css/slick-theme.min.css">
+        
+            <!-- jQuery -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+            <!-- 引入 Slick Carousel JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        </head>
+        
+    </header>
+    
+    <div class="black-bar"></div>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <a href="#"><img src="images/QUEEN_1.jpg" alt="Album 1"></a>
+            <a href="#"><img src="images/QUEEN_2.jpg" alt="Album 2"></a>
+            <a href="#"><img src="images/SHA.jpg" alt="Album 3"></a>
+            <a href="#"><img src="images/ANATO.jpg" alt="Album 4"></a>
+            <a href="#"><img src="images/DATR.jpg" alt="Album 5"></a>
+            <a href="#"><img src="images/NOTW.jpg" alt="Album 6"></a>
+            <a href="#"><img src="images/JAZZ.jpg" alt="Album 7"></a>
+            <a href="#"><img src="images/GAME.jpg" alt="Album 8"></a>
+            <a href="#"><img src="images/FLASH.jpg" alt="Album 9"></a>
+            <a href="#"><img src="images/HOT_SPACE.jpg" alt="Album 10"></a>
+        </div>
+    </div>
+    
+        
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Queen Band Official Website. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+<script>
+    $(document).ready(function(){
+        $('.carousel').slick({
+            slidesToShow: 4,  // 同时显示的图片数量
+            slidesToScroll: 4,  // 每次滑动一张图片
+            autoplay: true,  // 自动播放
+            autoplaySpeed: 2000,  // 自动播放间隔时间（以毫秒为单位）
+            dots: false,  // 显示圆点导航
+            arrows: true,  // 显示左右箭头
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    });
+</script>

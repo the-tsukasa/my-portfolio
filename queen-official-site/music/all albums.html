@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queen Band Official Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="images/Header-Logo.png" alt="Queen Logo" class="logo">
+        </a>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-button">Home</a></li>
+                <li><a href="discography.html" class="nav-button">Discography</a></li>
+                <li class="dropdown">
+                    <a href="members.html" class="nav-button">THE BAND</a>
+                    <ul class="dropdown-content">
+                        <li><a href="queen.html">Queen</a></li>
+                        <li><a href="freddie.html">Freddie Mercury</a></li>
+                        <li><a href="brian.html">Brian May</a></li>
+                        <li><a href="roger.html">Roger Taylor</a></li>
+                        <li><a href="john.html">John Deacon</a></li>
+                        <li><a href="features.html">Features</a></li>
+                    </ul>
+                </li>
+                <li><a href="videos.html" class="nav-button">Videos</a></li>
+                <li><a href="merch.html" class="nav-button">Merchandise</a></li>
+                <li><a href="news.html" class="nav-button">News</a></li>
+                <li><a href="contact.html" class="nav-button">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="black-bar"></div>
+
+    <div class="carousel-container">
+        <div class="carousel">
+          <div class="carousel-group">
+            <a href="#"><img src="images/QUEEN_1.jpg" alt="Album 1"></a>
+            <a href="#"><img src="images/QUEEN_2.jpg" alt="Album 2"></a>
+            <a href="#"><img src="images/SHA.jpg" alt="Album 3"></a>
+            <a href="#"><img src="images/ANATO.jpg" alt="Album 4"></a>
+          </div>
+          <div class="carousel-group">
+            <a href="#"><img src="images/DATR.jpg" alt="Album 5"></a>
+            <a href="#"><img src="images/NOTW.jpg" alt="Album 6"></a>
+            <a href="#"><img src="images/JAZZ.jpg" alt="Album 7"></a>
+            <a href="#"><img src="images/GAME.jpg" alt="Album 8"></a>
+          </div>
+          <div class="carousel-group">
+            <a href="#"><img src="images/FLASH.jpg" alt="Album 9"></a>
+            <a href="#"><img src="images/HOT_SPACE.jpg" alt="Album 10"></a>
+            <a href="#"><img src="images/WORKS.jpg" alt="Album 11"></a>
+            <a href="#"><img src="images/AKOM.jpg" alt="Album 12"></a>
+          </div>
+          <!-- 你可以继续添加更多的图片组 -->
+        </div>
+        
+        <!-- 左右切换按钮 -->
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+      
+      
+<!-- Discography Section -->
+<section id="discography">
+    <h2>Discography</h2>
+    <p>Queen's discography spans over five decades, from their debut album in 1973 to modern-day releases. With numerous chart-topping hits, the band's music remains influential across all generations.</p>
+    <div class="albums">
+        <!-- BOHEMIAN RHAPSODY Album -->
+        <div class="album">
+            <img src="images/BOHEMIANRHAPSODY.jpg" alt="BOHEMIAN RHAPSODY (OST)">
+            <p><strong>BOHEMIAN RHAPSODY (OST)</strong> - 1985</p>
+
+            <!-- Spotify Embed for Bohemian Rhapsody -->
+            <iframe src="https://open.spotify.com/embed/album/6i6folBtxKV28WX3msQ4FE" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+
+        <!-- QUEEN II Album -->
+        <div class="album">
+            <img src="images/QUEEN_2.jpg" alt="QUEEN II">
+            <p><strong>QUEEN II</strong> - 1973</p>
+
+            <!-- Spotify Embed for Queen II -->
+            <iframe src="https://open.spotify.com/embed/album/48MhNEYxMJvcBbqz85UTQP" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <!-- More albums -->
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Queen Band Official Website. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
