@@ -2,25 +2,36 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>ポートフォリオ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>私のポートフォリオ</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>私のポートフォリオ</h1>
-    <p>Web制作・AI・Java開発 など</p>
+    <div class="container">
+      <h1>tsukasaのポートフォリオ</h1>
+      <p>Web開発・AI・Java・クラウド</p>
+    </div>
   </header>
 
-  <section>
-    <h2>🌟 作品一覧</h2>
-    <ul>
-      <li><a href="car.html">🚗 Java 車シミュレーター</a></li>
-      <li><a href="https://the-tsukasa.github.io/AI-Shopping-Assistant/index.html">🛍️ AIショッピングアシスタント</a></li>
-    </ul>
+  <section class="projects">
+    <div class="project">
+      <h2>🚗 Car Simulator</h2>
+      <img src="car.png" alt="Car simulator image" />
+      <p>Javaで作成した車のスピード調整シミュレーターです。</p>
+      <a href="car.html" target="_blank">▶ デモを見る</a>
+    </div>
+
+    <div class="project">
+      <h2>🛒 AIショッピングアシスタント</h2>
+      <img src="ai.png" alt="AI shopping assistant image" />
+      <p>HTML/JSとChatbotで、PC購入をサポートするAIです。</p>
+      <a href="https://github.com/the-tsukasa/AI-Shopping-Assistant" target="_blank">📂 GitHubを見る</a>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 tsukasa syousui</p>
+    <p>© 2025 syousui | the-tsukasa.github.io</p>
   </footer>
 </body>
 </html>
