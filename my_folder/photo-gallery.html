@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>フォトギャラリー</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📷 フォトギャラリー</h1>
+    <p>撮影した風景写真（全33枚）</p>
+  </header>
+
+  <main class="gallery" id="gallery">
+    <!-- JavaScriptでランダム挿入 -->
+  </main>
+
+  <footer>
+    <p>© 2025 曹 小帥</p>
+  </footer>
+
+  <script>
+    const photos = Array.from({ length: 33 }, (_, i) => `images/photo${i + 1}.jpg`);
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    const shuffled = shuffle([...photos]);
+    const gallery = document.getElementById('gallery');
+
+    shuffled.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = '写真';
+      gallery.appendChild(img);
+    });
+  </script>
+</body>
+</html>

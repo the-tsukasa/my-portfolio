@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f0f0f0;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  background: #222;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+.gallery {
+  column-count: 4;          /* PC上4列表示 */
+  column-gap: 0;            /* 無縫隙 */
+  padding: 1rem;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.gallery img {
+  width: 100%;
+  display: block;
+  break-inside: avoid;
+  margin-bottom: 0;
+  border-radius: 0;         /* ⛔ 圆角取消 */
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: white;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    column-count: 1;
+  }
+}
