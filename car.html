@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>車の速度コントロール</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .status {
+      font-size: 24px;
+      margin: 20px;
+    }
+    button {
+      font-size: 20px;
+      margin: 10px;
+      padding: 10px 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🚗 車の速度コントロール</h1>
+
+  <div class="status">
+    <p id="carName">車名: Toyota</p>
+    <p id="speed">速度: 1 km/h</p>
+  </div>
+
+  <button onclick="speedUp()">加速（+5）</button>
+  <button onclick="speedDown()">減速（-3）</button>
+  <button onclick="reset()">リセット</button>
+
+  <script>
+    let carName = "Toyota";
+    let speed = 1;
+
+    function updateDisplay() {
+      document.getElementById("carName").textContent = "車名: " + carName;
+      document.getElementById("speed").textContent = "速度: " + speed + " km/h";
+    }
+
+    function speedUp() {
+      speed += 5;
+      updateDisplay();
+    }
+
+    function speedDown() {
+      speed -= 3;
+      if (speed < 1) speed = 1;
+      updateDisplay();
+    }
+
+    function reset() {
+      speed = 1;
+      updateDisplay();
+    }
+
+    updateDisplay();
+  </script>
+
+</body>
+</html>
