@@ -1,23 +1,79 @@
 body {
-  font-family: sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+  background: #f5f5f5;
+  color: #333;
 }
-header, footer {
-  background-color: #222;
+
+header {
+  background: #222;
   color: white;
   text-align: center;
-  padding: 1em;
+  padding: 2rem 1rem;
 }
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
 .projects {
-  display: grid;
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
 }
+
 .project {
-  background-color: white;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 6px;
+}
+
+/* 📸 特别样式：横向排列（图像右侧） */
+.project-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.text-block {
+  flex: 1;
+}
+
+.image-block img {
+  width: 160px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* 📱 响应式设计 */
+@media (max-width: 768px) {
+  .project-flex {
+    flex-direction: column;
+  }
+
+  .image-block img {
+    width: 100%;
+  }
+}
+
+footer {
+  text-align: center;
+  background: #222;
+  color: white;
   padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
