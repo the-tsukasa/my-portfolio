@@ -1,0 +1,23 @@
+body {
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+header, footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+.projects {
+  display: grid;
+  gap: 1rem;
+  padding: 2rem;
+}
+.project {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
