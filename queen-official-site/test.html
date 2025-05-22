@@ -1,0 +1,64 @@
+<div class="slide studioalbum slick-slide slick-current slick-active" tabindex="-1" role="option" aria-describedby="slick-slide00" style="width: 265px;" data-slick-index="0" aria-hidden="false"><img album="queen" i="0" src="https://www.queenonline.com/global/assets/modules/site/images/music/QUEEN_1.jpg"></div>
+<div class="slide studioalbum slick-slide slick-active" tabindex="-1" role="option" aria-describedby="slick-slide01" style="width: 265px;" data-slick-index="1" aria-hidden="false"><img album="queen_2" i="1" src="https://www.queenonline.com/global/assets/modules/site/images/music/QUEEN_2.jpg"></div>
+/*------------------------------------ Discography 音乐专辑 轮播图 --------------------------------------*/
+.carousel-container {
+  position: relative;
+  max-width: auto;
+  margin: auto;
+  overflow: hidden;
+  background-image: url('roger_bio1.jpg'); /* 背景图片 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* 黑色半透明渐变叠加 */
+      url('roger_bio1.jpg') no-repeat center center/cover; /* 背景图片 */
+    height: 100vh;
+    margin: 0;
+  
+  
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-group {
+  display: flex;
+  min-width: 100%;
+  justify-content: space-around;
+}
+
+.carousel-group a {
+  display: block;
+  text-align: center;
+  width: 20%;
+}
+
+.carousel-group img {
+  width: 100%;
+  height: auto;
+}
+
+/* 轮播图切换按钮 */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: none;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}

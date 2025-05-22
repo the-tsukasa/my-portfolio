@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queen Band Official Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="images/Header-Logo.png" alt="Queen Logo" class="logo">
+        </a>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-button">Home</a></li>
+                <li><a href="discography.html" class="nav-button">Discography</a></li>
+                <li class="dropdown">
+                    <a href="members.html" class="nav-button">THE BAND</a>
+                    <ul class="dropdown-content">
+                        <li><a href="queen.html">Queen</a></li>
+                        <li><a href="freddie.html">Freddie Mercury</a></li>
+                        <li><a href="brian.html">Brian May</a></li>
+                        <li><a href="roger.html">Roger Taylor</a></li>
+                        <li><a href="john.html">John Deacon</a></li>
+                        <li><a href="features.html">Features</a></li>
+                    </ul>
+                </li>
+                <li><a href="videos.html" class="nav-button">Videos</a></li>
+                <li><a href="merch.html" class="nav-button">Merchandise</a></li>
+                <li><a href="news.html" class="nav-button">News</a></li>
+                <li><a href="contact.html" class="nav-button">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="black-bar"></div>
+    </header>
+
+    <!-- Video Section -->
+    <section id="video-section">
+        <h2>Live Stream Video</h2>
+        <video id="video" controls></video>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Queen Band Official Website. All rights reserved.</p>
+    </footer>
+
+    <!-- hls.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script>
+        if(Hls.isSupported()) {
+            var video = document.getElementById('video');
+            var hls = new Hls();
+            hls.loadSource('https://mvod.itunes.apple.com/itunes-assets/HLSMusic112/v4/10/dc/9f/10dc9f3c-dfef-c30e-2737-65824c285d22/P506057656_default.m3u8');
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED,function() {
+                video.play();
+            });
+        }
+        else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = 'https://mvod.itunes.apple.com/itunes-assets/HLSMusic112/v4/10/dc/9f/10dc9f3c-dfef-c30e-2737-65824c285d22/P506057656_default.m3u8';
+            video.addEventListener('loadedmetadata', function() {
+                video.play();
+            });
+        }
+    </script>
+</body>
+</html>
